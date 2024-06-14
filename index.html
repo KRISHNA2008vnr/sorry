@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorry</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            text-align: center;
+            margin: 50px;
+            white-space: pre-wrap; /* Preserve whitespace to show each sorry on a new line */
+        }
+        .sorry {
+            display: inline-block;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>I have typed 10000 sorry read one by one till your anger is gone and I wanted to apologize for avoiding you past week. As we moved to the 11th grade and I have been feeling really lonely with all the changes. It wasn't my intention to avoid you. Call me when you're free.</h1>
+    <div id="sorry-container"></div>
+
+    <script>
+        const container = document.getElementById('sorry-container');
+        let colors = ['red', 'green', 'blue', 'yellow', 'cyan', 'magenta', 'orange', 'purple', 'pink', 'lime'];
+        for (let i = 0; i < 10000; i++) {
+            let sorryElement = document.createElement('span');
+            sorryElement.className = 'sorry';
+            sorryElement.style.color = colors[i % colors.length];
+            sorryElement.innerHTML = 'sorry<br>';
+            container.appendChild(sorryElement);
+        }
+    </script>
+</body>
+</html>
